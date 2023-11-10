@@ -27,6 +27,7 @@
     "pino-pretty": "^10.2.3",
     "prisma": "^5.5.2",
     "tsc": "^2.0.4",
+    "tsconfig.json": "^1.0.11",
     "tscpaths": "^0.0.9",
     "typescript": "^5.2.2"
   }
