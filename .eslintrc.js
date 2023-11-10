@@ -18,6 +18,8 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
-    'class-methods-use-this': 'off'
+    'class-methods-use-this': 'off',
+    'import/prefer-default-export': 'off',
+    'max-classes-per-file': ['error', 2]
   }
 }

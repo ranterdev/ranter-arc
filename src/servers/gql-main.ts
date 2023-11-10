@@ -56,9 +56,7 @@ const startServer = async () => {
   await apolloServer.start()
   apolloServer.applyMiddleware({ app, path: '/graphql' })
   httpServer.listen({ port: APP_PORT }, () =>
-    baseLogger.info(
-      `🚀 Server listening on port http://localhost:${APP_PORT}/graphql`
-    )
+    baseLogger.info(`🚀 Server listening on port http://localhost:${APP_PORT}/graphql`)
   )
 
   httpServer.on('error', (err) => {
