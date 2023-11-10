@@ -1,4 +1,4 @@
 type ApolloConfig = {
-    playground: boolean
-    introspection: boolean
+  playground: boolean
+  introspection: boolean
 }

@@ -5,10 +5,10 @@ import { buildSchema } from 'type-graphql'
 import HelloResolver from './resolvers/HelloResolver'
 
 const getSchema = async () => {
-    const schema = await buildSchema({
-        resolvers: [HelloResolver]
-    })
-    return schema
+  const schema = await buildSchema({
+    resolvers: [HelloResolver]
+  })
+  return schema
 }
 
 export default getSchema

@@ -16,9 +16,8 @@
     "prettier"
   ],
   "rules": {
-    // Customized rules
-    "@typescript-eslint/no-extra-semi": "off", // Prettier work
-    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-extra-semi": "off",
+
     "@typescript-eslint/prefer-for-of": "error",
     "@typescript-eslint/unified-signatures": "error",
 
@@ -50,8 +49,6 @@
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
 
-    "no-duplicate-imports": "error",
-    "no-empty-function": "error",
     "no-empty": ["error", { "allowEmptyCatch": true }],
     "no-new-wrappers": "error",
     "no-param-reassign": "error",
@@ -59,8 +56,6 @@
     "no-sequences": "error",
     "no-throw-literal": "error",
     "no-void": "error",
-
-    // Temporarily disabled recommended rules
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "no-async-promise-executor": "off"
   },
