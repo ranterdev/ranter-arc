@@ -1,0 +1,10 @@
+# Ignore artifacts:
+build
+coverage
+.github
+out
+tsconfig.json
+README.md
+package.json
+.prettierrc.json
+.eslintrc.json
