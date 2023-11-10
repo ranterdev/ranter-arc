@@ -1,0 +1,8 @@
+{
+  "name": "ranter",
+  "version": "1.0.0",
+  "description": "Ranter Backend",
+  "repository": "git@github.com:autifynetwork/Autify-Backend.git",
+  "license": "AGPL-3.0",
+  "private": true
+}
