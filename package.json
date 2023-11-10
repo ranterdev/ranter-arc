@@ -17,6 +17,8 @@
     "tsc-check": "tsc --noEmit && tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
+    "apollo-server-core": "^3.12.1",
+    "apollo-server-express": "^3.12.1",
     "class-validator": "^0.14.0",
     "express": "^4.18.2",
     "graphql": "^15.3.0",
