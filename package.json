@@ -2,7 +2,7 @@
   "name": "ranter",
   "version": "1.0.0",
   "description": "Ranter Backend",
-  "repository": "git@github.com:autifynetwork/Autify-Backend.git",
+  "repository": "git@github.com:ranterdev/ranter.git",
   "license": "AGPL-3.0",
   "private": true,
   "engines": {
@@ -15,7 +15,8 @@
     "eslint-check": "eslint \"{src,test}/**/*.ts\"",
     "eslint-fix": "eslint \"{src,test}/**/*.ts\" --fix",
     "tsc-check": "tsc --noEmit && tsc --noEmit --skipLibCheck",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "migrate": ". ./.envrc && npx prisma migrate deploy"
   },
   "dependencies": {
     "@prisma/client": "^5.5.2",
