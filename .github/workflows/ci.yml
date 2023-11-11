@@ -52,7 +52,7 @@ jobs:
         run: |-
           echo "${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
 
-      # Push the Docker image to Docker Hub
+      # Push the Docker image
       - name: Push
         run: |-
           docker push "$DOCKER_HUB_USERNAME/$IMAGE:$GITHUB_SHA"
