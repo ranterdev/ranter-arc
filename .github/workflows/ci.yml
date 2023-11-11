@@ -3,7 +3,7 @@ name: CI and Deploy to GKE
 on:
   push:
     branches:
-      - main
+      - deployment-ci
 
 jobs:
   build-and-deploy:
