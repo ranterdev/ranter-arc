@@ -7,7 +7,7 @@ const defaultContent = fs.readFileSync('default.yaml', 'utf8')
 // TODO: Custom config.yaml
 
 export const yamlConfig = yaml.load(defaultContent) as {
-    apollo: ApolloConfig
+  apollo: ApolloConfig
 }
 
 /* Config easy access */

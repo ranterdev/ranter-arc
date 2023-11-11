@@ -1,5 +1,5 @@
 apollo:
-    playground: true
+  playground: true
 
-    # If playground is enabled, but introspection is disabled, the playground will not be able to show the schema
-    introspection: true
+  # If playground is enabled, but introspection is disabled, the playground will not be able to show the schema
+  introspection: true
