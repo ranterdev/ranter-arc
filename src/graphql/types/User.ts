@@ -18,7 +18,7 @@ export class UserInput {
 }
 
 @ObjectType()
-export class User {
+export class UserObject {
   @Field(() => Int)
   id: number
 

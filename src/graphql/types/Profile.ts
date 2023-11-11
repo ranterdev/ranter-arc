@@ -1,5 +1,5 @@
 import { Field, Int, InputType, ObjectType } from 'type-graphql'
-import { User } from '@graphql/types/User'
+import { UserObject } from '@graphql/types/User'
 
 @InputType()
 export class CreateProfileInput {
@@ -21,6 +21,6 @@ export class Profile {
   @Field(() => Int)
   userId: number
 
-  @Field(() => User)
-  user: User
+  @Field(() => UserObject)
+  user: UserObject
 }

@@ -2,11 +2,12 @@ import 'reflect-metadata'
 
 import { buildSchema } from 'type-graphql'
 
-import HelloResolver from './resolvers/HelloResolver'
+import HelloResolver from '@graphql/resolvers/HelloResolver'
+import { UserResolver } from '@graphql/resolvers/User'
 
 const getSchema = async () => {
   const schema = await buildSchema({
-    resolvers: [HelloResolver]
+    resolvers: [HelloResolver, UserResolver]
   })
   return schema
 }

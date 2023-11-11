@@ -1,5 +1,5 @@
 import { ObjectType, Field, Int, InputType } from 'type-graphql'
-import { User } from '@graphql/types/User'
+import { UserObject } from '@graphql/types/User'
 
 @InputType()
 export class CreatePostInput {
@@ -24,8 +24,8 @@ export class Post {
   @Field(() => Int)
   authorId: number
 
-  @Field(() => User)
-  author: User
+  @Field(() => UserObject)
+  author: UserObject
 
   @Field(() => Boolean)
   published: boolean
