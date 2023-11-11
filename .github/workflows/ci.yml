@@ -1,0 +1,36 @@
+name: CI and Deploy to GKE
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up GKE
+        uses: imjasonh/gke-auth@v0.1.0
+        with:
+          project: ${{ secrets.GCP_PROJECT_ID }}
+          location: ${{ secrets.GKE_CLUSTER_LOCATION }}
+          cluster: ${{ secrets.GKE_CLUSTER_NAME }}
+
+      - name: Configure kubectl
+        run: |
+          mkdir -p $HOME/.kube
+          cp ./kubeconfig.yaml $HOME/.kube/config
+          kubectl config use-context ${{ secrets.GKE_CLUSTER_NAME }}
+
+      - name: Build Docker image
+        run: docker build -t your-backend-image:latest .
+
+      - name: Database Migrations
+        run: docker run --env-file=.env your-backend-image:latest npx prisma migrate dev --name init
+
+      - name: Deploy to GKE
+        run: kubectl apply -f k8s/deployment.yaml
