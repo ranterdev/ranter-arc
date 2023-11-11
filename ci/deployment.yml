@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ranter-deploy-dev
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ranter
+  template:
+    metadata:
+      labels:
+        app: ranter
+    spec:
+      containers:
+        - name: ranter
+          image: gcr.io/PROJECT_ID/IMAGE:TAG
+          ports:
+            - containerPort: 8080
