@@ -11,7 +11,7 @@ COPY ./src ./src
 RUN yarn build
 RUN yarn install --frozen-lockfile --production
 
-FROM node:16
+FROM node:18
 COPY --from=BUILD_IMAGE /app/lib /app/lib
 COPY --from=BUILD_IMAGE /app/node_modules /app/node_modules
 COPY --from=BUILD_IMAGE /app/prisma /app/prisma
