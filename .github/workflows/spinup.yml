@@ -1,0 +1,33 @@
+name: Spinup Server
+
+on:
+  push:
+    branches: ['deployment-ci']
+
+jobs:
+  spinup-server:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Install direnv
+        run: sudo apt-get install direnv -y
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build the app
+        run: yarn build
+
+      - name: Run Server & Get Healthz
+        run: |
+          . ./.envrc && yarn start &
+          sleep 5
+          curl --fail http://localhost:4000/healthz
